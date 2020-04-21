@@ -39,10 +39,10 @@ $('.swiper-samll .swiper-slide').on('click',function(){
 
 var lswiper = new Swiper('.hint-left-ex-center', {
     // loop: true,//复制多份循环(这里就是让轮播看起来是循环的，去掉这个就恢复了默认的swiper轮播)
-    autoplay: 2000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
-    direction: 'vertical',
+    autoplay: 3000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
+    // direction: 'vertical',
     effect: 'slide',
-    nested: true,
-    spaceBetween: 10,
-    slidesPerView: 5, /* 容器能够同时显示的slides(幻灯片)数量 */
+    // nested: true,
+    // spaceBetween: 10,
+    // slidesPerView: 5, /* 容器能够同时显示的slides(幻灯片)数量 */
 });
