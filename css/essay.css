@@ -532,7 +532,7 @@
 /* 相关游记轮播 */
 .main-right-tra{
     margin-top: 0;
-    padding: 20px 0;
+    padding: 20px 0 0;
     background-color: #fff;
 }
 .main-right-bourn-fix{
@@ -594,7 +594,7 @@
 .essay-dong{
     position: fixed;
     bottom: 300px;
-    left: 0;
+    left: -100px;
     width: 50px;
     height: 130px;
 }
@@ -607,11 +607,106 @@
 }
 .essay-dong span:nth-child(2){
     position: absolute;
-    top: 40px;
+    top: 25px;
     left: 4px;
 }
 .essay-dong span:nth-child(3){
     position: absolute;
-    top: 85px;
+    top: 70px;
     left: 4px;
 }
+ /* 鼠标经过动物   日本旅行推荐 */
+ .essay-guide{
+    position: fixed;
+    bottom: 300px;
+    left: -600px;
+    width: 560px;
+    height: 280px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
+ }
+ .essay-guide-left{
+     float: left;
+     width: 90px;
+     height: 100%;
+     
+     background-color: #f9f9f9;
+ }
+ .essay-guide-left h2{
+     color: #fff;
+     font-size: 16px;
+     text-align: center;
+     line-height: 50px;
+     background-color: #ff9e00;
+ }
+ .essay-guide-right{
+     position: relative;
+     float: left;
+     width: 470px;
+     height: 100%;
+     padding:0 14px;
+     box-sizing: border-box;
+     border-left: 1px solid #ccc;
+ }
+ .essay-guide-right b{
+     position: absolute;
+     top: 0px;
+     right: 10px;
+     color: #999;
+     font-size: 30px;
+     font-weight: initial;
+     cursor: pointer;
+ }
+ .essay-guide-right h3{
+     line-height: 40px;
+     border-bottom: 1px solid #ccc;
+ }
+ .essay-guide-new{
+     position: relative;
+     height: 85px;
+     padding: 20px 0 10px;
+     border-bottom: 1px dotted #ccc;
+ }
+ .essay-guide-new img{
+     float: left;
+ }
+ .essay-guide-new a{
+     float: left;
+     width: 300px;
+     color: #ff9e00;
+     font-size: 16px;
+     font-weight: bold;
+     line-height: 22px;
+     margin-left: 8px;
+ }
+ .essay-guide-new i{
+     position: absolute;
+     bottom: 4px;
+     right: 10px;
+     color: #ff9e00;
+     font-size: 20px;
+     font-weight: bold;
+ }
+ .essay-guide-right ul{
+     padding: 10px 0;
+ }
+ .essay-guide-right ul span{
+     color: #67b5f2;
+     padding: 2px;
+     font-weight: normal;
+     border: 1px solid #67b5f2;
+ }
+ .essay-guide-right ul li{
+     font-size: 14px;
+     font-weight: bold;
+     line-height: 30px;
+ }
+ .essay-guide-right ul li:nth-child(2){
+     margin-left: 65px;
+ }
+ .essay-guide-right ul i{
+     float: right;
+     color: #ff9e00;
+     font-size: 14px;
+     font-weight: bold;
+ }

@@ -288,7 +288,10 @@ header .top-nav-right i {
 .swiper-samll .a{
   border: 2px solid #ff9e00;
 }
-
+/* 轮播图上的缩略图 */
+.swiper-slide-thumb-active{
+  border: 2px solid #ff9e00 !important;
+}
 /* 轮播图上的tab切换 */
 .swiper-tab{
   position:absolute;
@@ -524,6 +527,21 @@ header .top-nav-right i {
   font-size: 14px;
   line-height: 20px;
 }
+.swiper-container-hint .swiper-pagination{
+  bottom: 120px !important;
+  left:  40px !important;
+  
+}
+.swiper-pagination-bullet{
+  width: 20px;
+  height: 10px;
+  border-radius: 6px;
+  opacity: 1;
+  background-color: #fff;
+}
+.swiper-pagination-bullet-active{
+  background-color: #ff9d00;
+}
 /* 旅游攻略 */
 .strategy{
   margin-bottom: 10px;
@@ -549,6 +567,10 @@ header .top-nav-right i {
 }
 .strategy a:hover{
   text-decoration: underline;
+}
+.hint-left-act .swiper-pagination{
+  bottom: 80px !important;
+  left: 70px !important;
 }
 /* 最新资讯 */
 .hint-left-mes{

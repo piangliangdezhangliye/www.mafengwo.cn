@@ -1,0 +1,357 @@
+body,html{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/* 进来显示 */
+.depart-start{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    background-color: #fff;
+    overflow: hidden;
+}
+/* logo */
+.depart-logo{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+}
+/* 韩国遇见 */
+.depary-meet{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    padding-top: 200px;
+}
+.depary-meet img{
+    width: 100%;
+    height: auto;
+}
+/* 左边图片 */
+.depart-left-img{
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+    width: 650px;
+    height: 100%;
+    overflow: hidden;
+    animation: move 4s linear infinite;
+}
+@keyframes move{
+    0%{
+        left:-40px
+    }
+    50%{
+        left:0
+    }
+    100%{
+        left:-40px
+    }
+}
+.depart-left-img img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* 启程出发 */
+.depart-btn{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+}
+.depart-btn img{
+    width: 100%;
+}
+.depart-music{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 40px;
+    background-image: url(../images/depart-music.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 200;
+}
+/* 切到下一屏 */
+.depart-backgroud{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position:0 -1600px;
+    background-size: 100% auto;
+    overflow: hidden;
+}
+.depart-backgroud>img{
+    position: absolute;
+    width: 345px;
+    height: auto;
+}
+.depart-backgroud>p{
+    position: absolute;
+    width: 290px;
+    height: auto;
+    font-size: 20px;
+    color: #fff;
+    line-height: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+.depart-right-fix{
+    position: fixed;
+    top: 50%;
+    right: -135px;
+    z-index: 11;
+    margin-top: -150px;
+}
+.depart-right-fix ul{
+    width: 135px;
+}
+.depart-right-fix ul li{
+    font-size: 20px;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.depart-right-fix ul li:first-child{
+    border-top-left-radius: 8px;
+}
+.depart-right-fix ul li:last-child{
+    border-bottom-left-radius: 8px;
+}
+.depart-right-fix ul a{
+    display: block;
+    height: 70px;
+    color: #fff;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.depart-right-fix ul h3{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.depart-right-fix ul li:last-child{
+    line-height: 70px;
+    color: #fc6;
+}
+.depart-right-fix ul li:first-child{
+    background-color:rgba(0, 0, 0, 0.6) ;
+}
+.depart-right-fix span{
+    position: absolute;
+    left: -34px;
+    top: 50%;
+    margin-top: -30px;
+    width: 34px;
+    height: 60px;
+    overflow: hidden;
+}
+.depart-right-fix b{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px 0 0 30px;
+    background-color: #ffc600;
+}
+.depart-right-fix i{
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    border-top: 2px solid #333;
+    border-left: 2px solid #333;
+    transform: rotate(135deg);
+}
+/* 第一屏 */
+.depart-backgroud-one{
+    z-index: 10;
+    background-image: url(../images/depary-1.jpg);
+}
+.depart-backgroud-one>p{
+    left: 40px;
+    top: 280px;
+}
+.depart-backgroud-one img{
+    left: 30px;
+    top: 110px;
+}
+/* 第二屏 */
+.depart-backgroud-two{
+    background-image: url(../images/depary-2.jpg);
+}
+.depart-backgroud-two img,
+.depart-backgroud-three img{
+    position: absolute;
+    left: 30px;
+    bottom: 280px;
+}
+.depart-backgroud-two p,
+.depart-backgroud-three p{
+    left: 40px;
+    bottom: 110px;
+}
+/* 第三屏 */
+.depart-backgroud-three{
+    background-image: url(../images/depary-3.jpg);
+}
+/* 第四屏 */
+.depart-backgroud-four{
+    background-image: url(../images/depary-4.jpg);
+}
+.depart-backgroud-four p{
+    left: 40px;
+    top: 280px;
+}
+.depart-backgroud-four img{
+    left: 30px;
+    top: 110px;
+}
+/* 第五屏 */
+.depart-backgroud-five{
+    height: 110%;
+    background-image: url(../images/depary-5.jpg);
+    background-position: 0px 0px;
+    overflow: visible;
+}
+/* 视频 */
+.swiper-container{
+    width: 490px;
+    height: 310px;
+    margin:auto;
+    margin-top: 100px;
+}
+.swiper-container video{
+    width: 100%;
+    height: auto;
+    border-radius: 20px !important;
+    object-fit: fill;
+}
+.swiper-slide{
+    position: relative;
+}
+.depart-backgroud-five-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89%;
+    border-radius: 20px;
+    background-image: url(../images/depart-backgroud-five-mask.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    opacity: 0.9;
+}
+.depart-backgroud-five-mask p{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+}
+.swiper-pagination-bullets{
+    bottom: 0px !important;
+}
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: #ffc600 ;
+}
+/* 文字 文章 */
+.depart-backgroud-five-text ul{
+    margin-left: 40px;
+}
+.depart-backgroud-five-text li{
+    position: relative;
+    float: left;
+    width: 430px;
+    height: 470px;
+    padding:24px 50px;
+    margin-right: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.depart-backgroud-five-text li:last-child{
+    margin-right: 0;
+}
+.depart-backgroud-five-text li b{
+    position: absolute;
+    top: 20px;
+    left: -18px;
+    width: 56px;
+    height: 69px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    background-image: url(../images/depart-backgroud-five-text.png);
+    background-size: 100% auto;
+}
+.depart-backgroud-five-text li h2{
+    font-size: 24px;
+    font-weight: initial;
+    margin-bottom: 30px;
+}
+.depart-backgroud-five-text li>img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.depart-backgroud-five-text li p{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+.depart-backgroud-five-text li span{
+    float: right;
+    color: #999;
+    font-size: 14px;
+    line-height: 30px;
+}
+.depart-backgroud-five-text li span img{
+    width: 29px;
+    height: 29px;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+.depart-backgroud-five-text-btn-share{
+    float: left;
+    width: 260px;
+}
+.depart-backgroud-five-text-btn-share img{
+    width: 100%;
+}
+.depart-backgroud-five-text-btn-more{
+    float: right;
+    width: 260px;
+}
+.depart-backgroud-five-text-btn-more img{
+    width: 100%;
+}

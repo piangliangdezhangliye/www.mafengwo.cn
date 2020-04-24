@@ -1,48 +1,119 @@
-$('.swiper-samll .swiper-slide').eq(0).addClass('a')
-var smallIndex
-var swiper = new Swiper('.swiper-big', {
-    // loop: true,//复制多份循环(这里就是让轮播看起来是循环的，去掉这个就恢复了默认的swiper轮播)
-    autoplay: 2000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
-    effect: 'fade',  //淡入
-    onSlideChangeEnd: function (swiper) {
-        var oindex = swiper.activeIndex;
-        $('.swiper-samll .swiper-slide').removeClass('a')
-        $('.swiper-samll .swiper-slide').eq(oindex).addClass('a')
+
+var gallerySwiper = new Swiper('#gallery', {
+    spaceBetween: 10,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: true,
+    },
+    effect: 'fade',
+    thumbs: {
+        swiper: {
+            el: '#thumbs',
+            spaceBetween: 10,
+            slidesPerView: 4,
+            direction: 'vertical',
+            watchSlidesVisibility: true,/*避免出现bug*/
+        },
+    }
+})
+
+
+/*鼠标移入停止轮播，鼠标离开 继续轮播*/
+
+// 左边小轮播图
+var hswiper = new Swiper('.swiper-container-hint', {
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    effect: 'slide',
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+// $('.swiper-container-hint').hover(function(){
+//     hswiper.autoplay.stop()
+// },function(){
+//     hswiper.autoplay.start()
+// })
+// 鼠标经过
+$('.swiper-container-hint').hover(function () {
+    hswiper.autoplay.stop()
+}, function () {
+    hswiper.autoplay.start()
+})
+var aswiper = new Swiper('.hint-left-act', {
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    effect: 'slide',
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+// 鼠标经过
+$('.hint-left-act').hover(function () {
+    aswiper.autoplay.stop()
+}, function () {
+    aswiper.autoplay.start()
+})
+
+
+// 第一个子页面轮播相关攻略
+var str = new Swiper('.main-right-str-one', {
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    effect: 'slide',
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+// 鼠标经过
+$('.main-right-str-one').hover(function () {
+    str.autoplay.stop()
+}, function () {
+    str.autoplay.start()
+})
+
+// 第一个子页面轮播相关攻略
+var tra = new Swiper('.main-right-tra', {
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    effect: 'slide',
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+// 鼠标经过
+$('.main-right-tra').hover(function () {
+    tra.autoplay.stop()
+}, function () {
+    tra.autoplay.start()
+})
+
+// 第二个子页面视频轮播
+var video = new Swiper('.depart-backgroud-five-vadio', {
+    // effect: 'slide',
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
     },
 });
 
-var oswiper = new Swiper('.swiper-samll', {
-    // loop: true,//复制多份循环(这里就是让轮播看起来是循环的，去掉这个就恢复了默认的swiper轮播)
-    autoplay: 2000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
-    direction: 'vertical',
-    nested: true,
-    spaceBetween: 10,
-    slidesPerView: 5, /* 容器能够同时显示的slides(幻灯片)数量 */
-});
-
-/*鼠标移入停止轮播，鼠标离开 继续轮播*/
-// $('.swiper-container').mouseenter(function () {
-//     swiper.stopAutoplay();
-//     oswiper.stopAutoplay();
-//     // console.log(222)
-// })
-// $('.swiper-container').mouseleave(function () {
-//     swiper.startAutoplay();
-//     oswiper.startAutoplay();
-// })
-
-var lswiper = new Swiper('.hint-left-ex-center', {
-    autoplay: 3000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
-    effect: 'slide',
-});
-
-// 第一个子页面轮播相关攻略
-var str= new Swiper('.main-right-str', {
-    // loop: true,//复制多份循环(这里就是让轮播看起来是循环的，去掉这个就恢复了默认的swiper轮播)
-    autoplay: 3000,//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
-    effect: 'slide', 
-    pagination: '.swiper-pagination',
-    slideToClickedSlide: true
-});
-
-
+$('.depart-backgroud-five-mask').click(function () {
+    var oindex = $(this).parents('.swiper-slide').index()
+    $(this).hide()
+    console.log(oindex)
+    $('.swiper-slide').eq(oindex).find('video').trigger('play');
+    $('.swiper-slide').eq(oindex).find('video').attr("controls",'controls')
+})

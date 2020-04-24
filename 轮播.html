@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/reset/">
+    <link rel="stylesheet" href="./lib/Swiper/css/swiper.min.css">
+</head>
+
+<body>
+    <div class="swiper-container swiper-big">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./images/carouse-1.png" alt=""></div>
+            <div class="swiper-slide"><img src="./images/carouse-2.png" alt=""></div>
+            <div class="swiper-slide"><img src="./images/carouse-3.png" alt=""></div>
+            <div class="swiper-slide"><img src="./images/carouse-4.png" alt=""></div>
+            <div class="swiper-slide"><img src="./images/carouse-5.png" alt=""></div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
+    </div>
+    <!-- <script src="./lib/jQuery/jquery-1.12.3.min.js"></script> -->
+    <script src="./lib/Swiper/js/swiper.min.js"></script>
+    <!-- <script src="./lib/Swiper/js/swiper.jquery.js"></script> -->
+    <script>
+        
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+    });
+  
+    </script>
+</body>
+
+</html>

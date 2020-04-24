@@ -66,5 +66,27 @@ $('.main-right-log li a').click(function(){
     let ytop=$('.main-left-img-text>div').eq(oindex).offset().top
     $(document).scrollTop(ytop-80)
 })
-
 // 动物眼球
+$(document).mousemove(function(e){
+    let ox= e.pageX
+    dongLeft=ox*10/$(window).width()
+    let oy= e.pageY
+    dongTop=oy*20/$(window).height()
+    $('.essay-dong span').css({left:dongLeft})
+    $('.essay-dong span:nth-child(2)').css({top:dongTop+25})
+    $('.essay-dong span:nth-child(3)').css({top:70+dongTop})
+})
+
+// 鼠标经过动物
+let dongTimer=setTimeout(function(){
+    $('.essay-dong').animate({left:0},1000)
+},300)
+$('.essay-dong').mouseenter(function(){
+    $('.essay-guide').animate({left:0},1000)
+    $('.essay-dong').animate({left:-100},1000)
+})
+$('.essay-guide-right b').click(function(){
+    $('.essay-guide').animate({left:-600},1000,function(){
+    $('.essay-dong').animate({left:0},1000)
+    })
+})

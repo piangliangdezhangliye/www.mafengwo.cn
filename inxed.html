@@ -73,7 +73,7 @@
     <script src="./js/top-nav.js"></script>
     <!-- 轮播图 -->
     <div class="swiper-box">
-        <div class="swiper-container swiper-big">
+        <div class="swiper-container swiper-big" id="gallery">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -100,7 +100,7 @@
             </div>
         </div>
         <!-- 缩略图 -->
-        <div class="swiper-container swiper-samll">
+        <div class="swiper-container swiper-samll" id="thumbs">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./images/carouse-1.png" alt=""></div>
                 <div class="swiper-slide"><img src="./images/carouse-2.png" alt=""></div>
@@ -110,10 +110,10 @@
             </div>
         </div>
     </div>
-    <script src="./lib/jQuery/jquery-1.12.3.min.js"></script>
+    <!-- <script src="./lib/jQuery/jquery-1.12.3.min.js"></script> -->
     <!-- swiper插件 -->
     <script src="./lib/Swiper/js/swiper.min.js"></script>
-    <script src="./lib/Swiper/js/swiper.jquery.min.js"></script>
+    <!-- <script src="./lib/Swiper/js/swiper.jquery.min.js"></script> -->
     <!-- swiper初始化插件 -->
     <script src="./js/swiper.js"></script>
     <!-- 轮播图上的tab切换 -->
@@ -191,7 +191,7 @@
                         <h3>旅行家专栏</h3>
                         <a href="#"><span>专栏首页</span></a>
                     </div>
-                    <div class="swiper-container hint-left-ex-center">
+                    <div class="swiper-container swiper-container-hint hint-left-ex-center">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="./images/hint-left-ex-center-a.jpeg" alt="">
@@ -219,6 +219,8 @@
                                 <p>我最终从胡日尔的美术馆里带走了一幅画，画的是冬日的萨满岩，是日落时分。</p>
                             </div>
                         </div>
+                        <!-- 分页 -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
                 <!-- 旅游攻略推荐 -->
@@ -256,6 +258,8 @@
                                 <p>每周二：拍精美实物奖品！</p>
                             </div>
                         </div>
+                        <!-- 分页 -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
                 <!-- 未知旅行实验室 -->
@@ -292,7 +296,7 @@
             </div>
             <!-- swiper插件 -->
             <script src="./lib/Swiper/js/swiper.min.js"></script>
-            <script src="./lib/Swiper/js/swiper.jquery.min.js"></script>
+            <!-- <script src="./lib/Swiper/js/swiper.jquery.min.js"></script> -->
             <!-- swiper初始化插件 -->
             <script src="./js/swiper.js"></script>
             <!-- 右边 -->
@@ -830,7 +834,7 @@
             </div>
         </div>
     </div>
-    <div class="ad-tc-left"><img  src="./images/ad-tc-3.png" alt=""></div>
+    <div class="ad-tc-left"><img src="./images/ad-tc-3.png" alt=""></div>
     <script src="./js/index-hint.js"></script>
 </body>
 
